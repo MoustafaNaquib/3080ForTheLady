@@ -1,0 +1,4 @@
+--twilio_account={your twliio account number}
+--twilio_token={your twilio token}
+--twilio_number={your twilio number}
+--numbers={your phone number}
