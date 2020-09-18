@@ -3,7 +3,6 @@ from twilio.rest import Client
 import time
 import argparse
 
-
 sleep_time = 10
 nvidia_url = "https://store.nvidia.com/store/nvidia/en_US/buy/productID.5438481700/clearCart.yes/nextPage.QuickBuyCartPage"
 
