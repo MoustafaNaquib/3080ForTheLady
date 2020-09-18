@@ -14,7 +14,7 @@ class TwilioTexter():
         self.twilio_number = twilio_number
         self.client = Client(twilio_account, twilio_token)
 
-    def send_text(self, number_to_text):
+    def send_text(self, number_to_text, message):
         # the following line needs your Twilio Account SID and Auth Token
 
         # change the "from_" number to your Twilio number and the "to" number
@@ -22,7 +22,7 @@ class TwilioTexter():
         # account to send SMS to any phone number
         self.client.messages.create(to=number_to_text,
                                from_= self.twilio_number,
-                               body=f'RED ALERT! THIS IS NOT A DRILL! GO GO GO! {nvidia_url}')
+                               body=message)
 
 
 def is_out_of_stock():
@@ -44,9 +44,9 @@ if __name__ == "__main__":
 
     twilio = TwilioTexter(args.twilio_account_number, args.twilio_token, args.twilio_number)
     numbers = args.numbers.split(',')
-
+    twilio.send_text(numbers[0], 'started listening')
     while 1:
         if not is_out_of_stock():
             for number in numbers:
-                twilio.send_text(number)
+                twilio.send_text(number, f'RED ALERT! THIS IS NOT A DRILL! GO GO GO! {nvidia_url}')
         time.sleep(sleep_time)
