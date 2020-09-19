@@ -2,3 +2,4 @@
 --twilio_token={your twilio token}
 --twilio_number={your twilio number}
 --numbers={your phone number}
+--stock_check_interval={seconds}
