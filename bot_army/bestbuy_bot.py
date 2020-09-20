@@ -15,7 +15,6 @@ class BestBuyBot(StockBot):
         ]
         super().__init__()
 
-
     def send_error_notification(self):
         self.twilio.send_text_to_all('Received error response on BestBuy')
 
@@ -62,13 +61,3 @@ class BestBuyBot(StockBot):
         elif successful_message and self.received_error_response:
             self.received_error_response = False
             self.send_recovery_notification()
-
-
-
-
-
-
-
-
-
-

@@ -2,14 +2,6 @@ import argparse
 from twilio_texter import TwilioTexter
 from bot_army.bestbuy_bot import BestBuyBot
 
-    # def is_out_of_stock(self):
-    #     payload = {}
-    #     headers = {}
-    #     response = requests.request("GET", nvidia_url, headers=headers, data = payload)
-    #     self.set_error_message_flag(response.status_code)
-    #     return response.text.count('sorry but NVIDIA GEFORCE RTX 3080 is currently out of stock')
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(fromfile_prefix_chars='@')
     parser.add_argument('--twilio_account', help='twilio account number')
@@ -31,6 +23,5 @@ if __name__ == "__main__":
     # twilio.send_text_to_all('started listening')
 
     while 1:
-        print('at top')
         for bot in bot_army:
             bot.check_watch_list_items(stock_check_interval)
