@@ -16,3 +16,7 @@ class AbstractStockBot(ABC):
 
     def send_carted_notification(self):
         pass
+
+    def check_watch_list_items(self):
+        pass
+
