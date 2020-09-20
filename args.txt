@@ -1,5 +1,5 @@
---twilio_account={your twliio account number}
---twilio_token={your twilio token}
---twilio_number={your twilio number}
---numbers={your phone number}
---stock_check_interval={seconds}
+--twilio_account=AC9dac2fdcb29ad2672411465d197e8630
+--twilio_token=b4683a880d9263a846df758e8872eb43
+--twilio_number=+16075583844
+--numbers=+14253435452
+--stock_check_interval=10
