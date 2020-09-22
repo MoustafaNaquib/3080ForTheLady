@@ -20,4 +20,3 @@ class StockBot(AbstractStockBot):
     def check_watch_list_items(self, stock_check_interval):
         for item in self.sku_watch_list:
             self.check_add_to_cart(item)
-            time.sleep(stock_check_interval)

@@ -31,5 +31,5 @@ Example:
 
 Execute script using following command:
 ```python
-python thrity80_bot.py @args.txt
+python thirty80_bot.py @args.txt
 ```
