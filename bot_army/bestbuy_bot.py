@@ -18,6 +18,7 @@ class BestBuyBot(StockBot):
         self.user_agent_list = get_user_agent_list()
         self.requests_since_refresh = 0
         self.cookies = None
+        self.total_count = 0
         super().__init__()
 
 
@@ -71,10 +72,12 @@ class BestBuyBot(StockBot):
         response_dict = response.json()
         print(response_dict)
         self.requests_since_refresh += 1
+        self.total_count += 1
+        print(self.total_count, 'successful responses')
         if 'errorSummary' not in response_dict:
             self.send_carted_notification(sku)
 
-        wait_time = random.randint(5, 45)
+        wait_time = random.randint(10, 60)
         print('long waiting', wait_time, 'seconds')
         sleep(wait_time)
 
